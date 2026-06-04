@@ -18,7 +18,7 @@
         </div>
 
         <!-- TIMER VIEW -->
-        <div id='timerView' class='flex-1 flex flex-col items-center justify-center gap-16 p-4 pb-24 hidden'>
+        <div id='timerView' class='flex-1 flex flex-col items-center justify-center gap-16 p-4 pb-24'>
 
             <!-- ROUTINE TITLE -->
             <h1 class='text-2xl'>Timer (CURRENT ROUTINE)</h1>
@@ -60,7 +60,7 @@
         </div>
 
         <!-- ROUTINE VIEW -->
-        <div id='savedView' class='flex-1 flex flex-col items-center justify-center gap-16 p-4 pb-24'>
+        <div id='routinesView' class='flex-1 flex flex-col items-center justify-center gap-16 p-4 pb-24 hidden'>
 
             <!-- ROUTINE TITLE -->
             <h1 class='text-2xl'>Saved Routines</h1>
@@ -176,15 +176,17 @@
 
         <!-- DOCK -->
         <div class='dock fixed bottom-0 left-0 right-0 bg-base-100/80 backdrop-blur'>
-            <button class='dock-active'>
+            <button id='routinesBtn' class=''>
                 <span class='dock-label'>Routines</span>
             </button>
-            <button class=''>
+            <button id='timerBtn' class='dock-active'>
                 <span class='dock-label'>Timer</span>
             </button>
-            <button class=''>
+            <button id='settingsBtn' class=''>
                 <span class='dock-label'>Settings</span>
             </button>
         </div>
+
+        <script src="script.js"></script>
     </body>
 </html>
