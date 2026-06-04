@@ -1,0 +1,12 @@
+{
+  "routines": [
+    {
+      "name": "4x4",
+      "sets": 4,
+      "reps": 4,
+      "hangTime": 4,
+      "restTime": 4,
+      "restBetweenSets": 30
+    }
+  ]
+}
