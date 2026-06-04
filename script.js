@@ -147,7 +147,10 @@ function updateDisplay() {
 
   // updates the countdown cirlce
   timerValueRadial.style.setProperty("--value", percentage);
-  timerValueRadial.setAttribute("aria-label", String(percentage).padStart(2, "0"));
+  timerValueRadial.setAttribute(
+    "aria-label",
+    String(percentage).padStart(2, "0"),
+  );
 }
 
 // start timer
@@ -173,6 +176,17 @@ function startTimer(duration) {
       isRunning = false;
     }
   }, 1000);
+}
+
+// restart timer
+function restartTimer() {
+  if (totalTime === 0) return;
+
+  clearInterval(timerInterval);
+  timeLeft = totalTime;
+  isRunning = false;
+
+  updateDisplay();
 }
 
 // Functions to run on start
