@@ -24,14 +24,15 @@
             <h1 class='text-2xl'>Timer (CURRENT ROUTINE)</h1>
 
             <!-- TIMER -->
-            <div class='radial-progress text-2xl'
+            <div id='timerValueRadial'
+                 class='radial-progress text-2xl'
                  style='--value:70; --size:12rem'
                  aria-valuenow='70'
                  role='progressbar'>
                     <span class="countdown font-mono text-3xl">
-                    <span style="--value:00; --digits: 2;" aria-live="polite" aria-label="00">00</span>
+                    <span id='timerValueMin' style="--value:00; --digits: 2;" aria-live="polite" aria-label="00">00</span>
                     :
-                    <span style="--value:05; --digits: 2;" aria-live="polite" aria-label="05">05</span>
+                    <span id='timerValueSec' style="--value:05; --digits: 2;" aria-live="polite" aria-label="05">05</span>
                     </span>
             </div>
 
@@ -53,9 +54,9 @@
 
             <!-- CONTROLS -->
             <div class='join'>
-                <button class="btn join-item">Prev</button>
-                <button class="btn join-item btn-neutral">Start</button>
-                <button class="btn join-item">Skip</button>
+                <button id='timerResetBtn' class="btn join-item">Prev</button>
+                <button id='timerStartBtn' class="btn join-item btn-neutral">Start</button>
+                <button id='timerSkipBtn' class="btn join-item">Skip</button>
             </div>
         </div>
 
@@ -66,41 +67,7 @@
             <h1 class='text-2xl'>Saved Routines</h1>
 
             <!-- ROUTINES LIST -->
-            <div class='bg-base-100 border-base-300 rounded-box w-xs border p-4'>
-                <div tabindex='0' class='collapse collapse-arrow'>
-                    <div class='collapse-title font-semibold'>
-                        <div class='flex flex-row justify-between'>
-                            4x4
-                            <input type="checkbox" checked class="toggle" />
-                        </div>
-                    </div>
-                    <div class='collapse-content text-sm'>
-                        <span>
-                            sets: 4 <br>
-                            reps: 4 <br>
-                            hang time: 4s <br>
-                            rest time: 4s <br>
-                            rest between sets: 30s <br>
-                        </span>
-                    </div>
-                </div>
-                <div tabindex='0' class='collapse collapse-arrow'>
-                    <div class='collapse-title font-semibold'>
-                        <div class='flex flex-row justify-between'>
-                            Max Hangs
-                            <input type="checkbox" class="toggle" />
-                        </div>
-                    </div>
-                    <div class='collapse-content text-sm'>
-                        <span>
-                            sets: 4 <br>
-                            reps: 6 <br>
-                            hang time: 10s <br>
-                            rest time: 90s <br>
-                            rest between sets: 120s <br>
-                        </span>
-                    </div>
-                </div>
+            <div id='routinesList' class='bg-base-100 border-base-300 rounded-box w-xs border p-4'>
             </div>
 
         </div>
