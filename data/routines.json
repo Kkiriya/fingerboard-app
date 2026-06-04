@@ -7,6 +7,14 @@
       "hangTime": 4,
       "restTime": 4,
       "restBetweenSets": 30
+    },
+    {
+      "name": "Max hangs",
+      "sets": 4,
+      "reps": 6,
+      "hangTime": 10,
+      "restTime": 90,
+      "restBetweenSets": 120
     }
   ]
 }
